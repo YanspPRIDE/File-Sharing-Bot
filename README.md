@@ -1,6 +1,6 @@
 # File-sharing-Bot
 
-https://telegra.ph/file/edd3288e30acee2fc7764.jpg
+[https://telegra.ph/file/edd3288e30acee2fc7764.jpg)</br>
 ##
 ### langsung deploy ke heroku
 #### Deploy on Heroku
