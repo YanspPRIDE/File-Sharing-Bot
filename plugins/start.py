@@ -13,7 +13,7 @@ from database.sql import add_user, query_msg, full_userbase
 
 #=====================================================================================##
 
-WAIT_MSG = """"<b>Processing ...</b>"""
+WAIT_MSG = """"<b>SABAR BOS🔥...</b>"""
 
 REPLY_ERROR = """<code>Use this command as a replay to any telegram message with out any spaces.</code>"""
 
@@ -90,8 +90,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("🔥", callback_data = "about"),
+                    InlineKeyboardButton("🔥", callback_data = "close")
                 ]
             ]
         )
@@ -114,7 +114,7 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton(
-                "Join Channel",
+                "🔥ᴋʟɪᴋ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ🔥",
                 url = client.invitelink)
         ]
     ]
@@ -122,7 +122,7 @@ async def not_joined(client: Client, message: Message):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = 'Try Again',
+                    text = '🔥ᴄᴏʙᴀ ʟᴀɢɪ🔥',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
@@ -160,7 +160,7 @@ async def send_text(client: Bot, message: Message):
         deleted = 0
         unsuccessful = 0
         
-        pls_wait = await message.reply("<i>Broadcasting Message.. This will Take Some Time</i>")
+        pls_wait = await message.reply("<i>sabar broadcastlu lagi gua kirim..elu tunggu aja beberapa menit</i>")
         for row in query:
             chat_id = int(row[0])
             try:
@@ -182,10 +182,10 @@ async def send_text(client: Bot, message: Message):
         status = f"""<b><u>Broadcast Completed</u>
 
 Total Users: <code>{total}</code>
-Successful: <code>{successful}</code>
-Blocked Users: <code>{blocked}</code>
-Deleted Accounts: <code>{deleted}</code>
-Unsuccessful: <code>{unsuccessful}</code></b>"""
+Terkirim: <code>{successful}</code>
+Diblokir: <code>{blocked}</code>
+Hapus akun: <code>{deleted}</code>
+Gagal : <code>{unsuccessful}</code></b>"""
         
         return await pls_wait.edit(status)
 
